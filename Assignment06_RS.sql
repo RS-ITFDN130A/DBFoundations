@@ -1,24 +1,24 @@
 --*************************************************************************--
 -- Title: Assignment06
--- Author: RSuter
+-- Author: RS
 -- Desc: This file demonstrates how to use Views
 -- Change Log: When,Who,What
--- 2017-01-01,RSuter,Created File
+-- 2017-01-01,RS,Created File
 --**************************************************************************--
 Begin Try
 	Use Master;
-	If Exists(Select Name From SysDatabases Where Name = 'Assignment06DB_RSuter')
+	If Exists(Select Name From SysDatabases Where Name = 'Assignment06DB_RS')
 	 Begin 
-	  Alter Database [Assignment06DB_RSuter] set Single_user With Rollback Immediate;
-	  Drop Database Assignment06DB_RSuter;
+	  Alter Database [Assignment06DB_RS] set Single_user With Rollback Immediate;
+	  Drop Database Assignment06DB_RS;
 	 End
-	Create Database Assignment06DB_RSuter;
+	Create Database Assignment06DB_RS;
 End Try
 Begin Catch
 	Print Error_Number();
 End Catch
 go
-Use Assignment06DB_RSuter;
+Use Assignment06DB_RS;
 
 -- Create Tables (Module 01)-- 
 Create Table Categories
